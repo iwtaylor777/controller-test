@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f0eee7;
-  --paper-bright: #fbfaf6;
-  --ink: #0a0b0b;
-  --muted: #6e706b;
-  --rule: #b9bbb5;
-  --dark-rule: #3d4040;
-  --accent: #5662ff;
+  --paper: #d7dad5;
+  --paper-bright: #e7e9e4;
+  --ink: #101211;
+  --panel: #171a18;
+  --muted: #666b67;
+  --rule: #aeb3ae;
+  --dark-rule: #414642;
+  --accent: #737dff;
   --warm: #9b243e;
   --cool: #17333c;
   --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -20,13 +21,13 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--ink);
+  background: #0d0f0e;
 }
 
 body {
   margin: 0;
   color: var(--ink);
-  background: var(--ink);
+  background: #0d0f0e;
   font-family: var(--sans);
   -webkit-font-smoothing: antialiased;
 }
@@ -119,7 +120,7 @@ a {
   background:
     linear-gradient(90deg, transparent calc(8.333% - 1px), rgba(255,255,255,.17) 8.333%, transparent calc(8.333% + 1px)),
     linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px),
-    #070808;
+    #111412;
   background-size: 100% 100%, 100% 122px, auto;
   border: 1px solid #6f7272;
 }
@@ -283,18 +284,18 @@ a {
 .hero-panel {
   position: absolute;
   z-index: 3;
-  left: 4%;
-  right: 4%;
-  bottom: 36px;
+  left: 0;
+  right: 0;
+  bottom: 0;
   min-height: 230px;
   padding: 38px 42px;
   display: grid;
   grid-template-columns: minmax(0, 1.65fr) minmax(240px, .65fr);
   gap: 54px;
   align-items: end;
-  color: var(--ink);
-  background: var(--paper-bright);
-  border: 1px solid #d7d7d1;
+  color: #f1f3ef;
+  background: rgba(16, 18, 17, .94);
+  border-top: 1px solid #646965;
 }
 
 .hero-panel h1 {
@@ -310,7 +311,7 @@ a {
   max-width: 720px;
   margin: 0;
   padding-left: 14px;
-  color: #30322f;
+  color: #b9bdb9;
   font-size: 13px;
   line-height: 1.5;
   border-left: 3px solid var(--accent);
@@ -319,7 +320,7 @@ a {
 .hero-panel p {
   max-width: 650px;
   margin: 24px 0 0;
-  color: #323433;
+  color: #b7bbb7;
   font-size: 17px;
   line-height: 1.5;
 }
@@ -329,7 +330,7 @@ a {
   flex-direction: column;
   gap: 18px;
   padding-left: 28px;
-  border-left: 1px solid #c9cbc6;
+  border-left: 1px solid #4a4f4b;
 }
 
 .hero-panel a {
@@ -349,16 +350,20 @@ a {
 .hero-primary-link {
   min-height: 48px;
   padding: 0 14px;
-  color: white;
-  background: var(--ink);
+  color: #f3f4f1;
+  background: transparent;
+  border: 1px solid #686e69;
   text-decoration: none;
 }
 
 .hero-primary-link:hover {
+  color: white;
   background: var(--accent);
+  border-color: var(--accent);
 }
 
 .hero-method-link {
+  color: #d9dcd8;
   line-height: 1.35;
 }
 
@@ -411,8 +416,8 @@ a {
   display: grid;
   grid-template-columns: 290px minmax(0, 1fr);
   background:
-    linear-gradient(rgba(10,11,11,.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(10,11,11,.055) 1px, transparent 1px),
+    linear-gradient(rgba(16,18,17,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16,18,17,.06) 1px, transparent 1px),
     var(--paper);
   background-size: 48px 48px;
   border-left: 1px solid var(--ink);
@@ -492,7 +497,7 @@ a {
   min-height: 48px;
   padding: 0 12px;
   color: var(--ink);
-  background: rgba(251,250,246,.88);
+  background: rgba(231,233,228,.84);
   border: 1px solid var(--rule);
   border-radius: 0;
   outline: none;
@@ -616,7 +621,7 @@ input[type="range"]::-moz-range-thumb {
   color: #f6f6f2;
   background:
     linear-gradient(rgba(255,255,255,.055) 1px, transparent 1px),
-    #0b0c0c;
+    var(--panel);
   background-size: 100% 44px;
   border-left: 1px solid var(--dark-rule);
 }
@@ -778,7 +783,7 @@ input[type="range"]::-moz-range-thumb {
   background:
     linear-gradient(90deg, transparent calc(8.333% - 1px), rgba(255,255,255,.14) 8.333%, transparent calc(8.333% + 1px)),
     linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
-    var(--ink);
+    #111412;
   background-size: 100% 100%, 100% 92px, auto;
   border-left: 1px solid #6f7272;
   border-right: 1px solid #6f7272;
@@ -796,11 +801,12 @@ input[type="range"]::-moz-range-thumb {
 .brief-paper {
   margin: 48px;
   padding: 36px;
-  color: var(--ink);
+  color: #eef0ec;
   background:
-    linear-gradient(rgba(10,11,11,.055) 1px, transparent 1px),
-    var(--paper-bright);
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    rgba(24, 28, 25, .92);
   background-size: 100% 29px;
+  border: 1px solid #555b56;
 }
 
 .brief-paper header {
@@ -808,7 +814,12 @@ input[type="range"]::-moz-range-thumb {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 20px;
-  border-bottom: 1px solid var(--ink);
+  border-bottom: 1px solid #686e69;
+}
+
+.brief-paper header span,
+.brief-grid span {
+  color: #929892;
 }
 
 .brief-paper header div {
@@ -834,15 +845,15 @@ input[type="range"]::-moz-range-thumb {
 .brief-grid {
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  border-top: 1px solid var(--rule);
-  border-left: 1px solid var(--rule);
+  border-top: 1px solid #4d524e;
+  border-left: 1px solid #4d524e;
 }
 
 .brief-grid > div {
   min-height: 150px;
   padding: 22px;
-  border-right: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
+  border-right: 1px solid #4d524e;
+  border-bottom: 1px solid #4d524e;
 }
 
 .brief-grid p {
@@ -853,12 +864,19 @@ input[type="range"]::-moz-range-thumb {
 
 .copy-button {
   margin-top: 28px;
+  color: #eff1ed;
+  background: transparent;
+  border-color: #686e69;
+}
+
+.copy-button:hover {
+  border-color: var(--accent);
 }
 
 .atlas-section {
   padding: 70px 0 82px;
   color: #ededeb;
-  background: var(--ink);
+  background: #111412;
   border-left: 1px solid #6f7272;
   border-right: 1px solid #6f7272;
   border-bottom: 1px solid #6f7272;
@@ -912,7 +930,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .atlas-case:hover {
-  background: #171919;
+  background: #1a1e1b;
 }
 
 .case-number,
@@ -1017,7 +1035,7 @@ input[type="range"]::-moz-range-thumb {
   grid-template-columns: 290px minmax(0,720px);
   gap: 52px;
   color: #ededeb;
-  background: var(--ink);
+  background: #111412;
   border-left: 1px solid #6f7272;
   border-right: 1px solid #6f7272;
   border-bottom: 1px solid #6f7272;
@@ -1153,9 +1171,9 @@ footer a {
   }
 
   .hero-panel {
-    left: 14px;
-    right: 14px;
-    bottom: 14px;
+    left: 0;
+    right: 0;
+    bottom: 0;
     min-height: 340px;
     padding: 28px 24px;
     grid-template-columns: 1fr;
@@ -1172,7 +1190,7 @@ footer a {
 
   .hero-panel-actions {
     padding: 20px 0 0;
-    border-top: 1px solid #c9cbc6;
+    border-top: 1px solid #4a4f4b;
     border-left: 0;
   }
 
