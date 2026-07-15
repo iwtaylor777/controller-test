@@ -1,18 +1,19 @@
 # Controller Test
 
-An independent proposal for how General Intuition could qualify early use cases, structure partner conversations, and turn promising ideas into measurable pilots.
+An independent proposal for how General Intuition could qualify early use cases, structure partner conversations, compare candidate opportunities, and turn the strongest into measurable pilots.
 
-The interactive assessment scores a use case across seven signals:
+The interactive assessment separates model fit from pilotability across eight signals:
 
-- bounded action space
-- observable feedback
+- stable action vocabulary
+- observable causal feedback
 - timing and sequence
-- simulation leverage
+- environmental variation
 - action-labeled data
-- environmental diversity
+- simulation and evaluation leverage
+- repeatable baselines
 - strategic value
 
-It produces a readiness signal and a six-week pilot brief.
+Three hard gates prevent a strong score from masking blocked operating conditions. The tool supports candidate comparison and produces a six-week action-opportunity memo.
 
 ## Run locally
 
